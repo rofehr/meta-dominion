@@ -217,7 +217,7 @@ pkg_postrm_kernel-devicetree () {
 	cd /${KERNEL_IMAGEDEST}; update-alternatives --remove devicetree devicetree-${KERNEL_VERSION} || true
 }
 
-# Automatically depend on lzop-native if CONFIG_KERNEL_LZO is enabled
+# Automatically depend on lzop/lz4-native if CONFIG_KERNEL_LZO/LZ4 is enabled
 python () {
     try:
         defconfig = bb.fetch2.localpath('file://defconfig', d)
@@ -232,4 +232,8 @@ python () {
     if 'CONFIG_KERNEL_LZO=y\n' in configfile.readlines():
         depends = d.getVar('DEPENDS', False)
         d.setVar('DEPENDS', depends + ' lzop-native')
+
+    if 'CONFIG_KERNEL_LZ4=y\n' in configfile.readlines():
+        depends = d.getVar('DEPENDS', False)
+        d.setVar('DEPENDS', depends + ' lz4-native')
 }
