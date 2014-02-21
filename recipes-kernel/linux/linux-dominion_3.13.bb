@@ -9,10 +9,10 @@ FILESPATH =. "${FILE_DIRNAME}/linux-dominion-3.13:${FILE_DIRNAME}/linux-dominion
 
 S = "${WORKDIR}/git"
 
-PV = "3.13.3"
+PV = "3.13.4"
 
 SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;branch=linux-3.13.y"
-SRCREV_pn-${PN} = "7955a48eed755f72dfe1174fda231d52e9a3d91d"
+SRCREV_pn-${PN} = "93ee5dcd2126535286cf7fe4de7977d51f959bcf"
 
 SRC_URI += " \
              file://0001-usb-stick-slowness-hack.patch \
