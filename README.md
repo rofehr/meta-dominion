@@ -27,6 +27,6 @@ Please use github for pull requests: https://github.com/koenkooi/meta-dominion/p
 Reporting bugs
 -------------------------
 
-The github issue tracker (https://github.com/koenkooi/meta-koenkooi/issues) is being used to keep track of bugs.
+The github issue tracker (https://github.com/koenkooi/meta-dominion/issues) is being used to keep track of bugs.
 
 Maintainers: Koen Kooi <koen@dominion.thruhere.net>
