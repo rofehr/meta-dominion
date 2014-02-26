@@ -6,9 +6,6 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=d7810fab7487fb0aad327b76f1be7cd7"
 
 inherit kernel siteinfo
 
-# Quirk for udev greater or equal 141
-UDEV_GE_141 ?= "0"
-
 # Specify the commandline for your device
 
 # Set the verbosity of kernel messages during runtime
@@ -86,7 +83,6 @@ do_configure_prepend() {
         #
 
         # Newer versions of udev mandate that sysfs doesn't have deprecated entries
-        if [ "${UDEV_GE_141}" = "1" ] ; then
             sed -e /CONFIG_SYSFS_DEPRECATED/d \
                 -e /CONFIG_SYSFS_DEPRECATED_V2/d \
                 -e /CONFIG_HOTPLUG/d \
@@ -115,10 +111,8 @@ do_configure_prepend() {
             echo 'CONFIG_BLK_DEV_BSG=y' >> ${S}/.config
             echo 'CONFIG_DEVTMPFS=y' >> ${S}/.config
             echo 'CONFIG_DEVTMPFS_MOUNT=y' >> ${S}/.config
-        fi
 
         # Newer inits like systemd need cgroup support
-        if [ "${KERNEL_ENABLE_CGROUPS}" = "1" ] ; then
             sed -e /CONFIG_CGROUP_SCHED/d \
                 -e /CONFIG_CGROUPS/d \
                 -i '${S}/.config'
@@ -132,7 +126,6 @@ do_configure_prepend() {
             echo 'CONFIG_PROC_PID_CPUSET=y' >> ${S}/.config
             echo 'CONFIG_CGROUP_CPUACCT=y' >> ${S}/.config
             echo 'CONFIG_RESOURCE_COUNTERS=y' >> ${S}/.config
-        fi
 
         #
         # root-over-nfs-over-usb-eth support. Limited, but should cover some cases.
@@ -158,7 +151,10 @@ do_configure_prepend() {
                 echo "CONFIG_ROOT_NFS=y"                 >> ${S}/.config
                 echo "CONFIG_CMDLINE=\"${CMDLINE_NFSROOT_USB}\"" >> ${S}/.config
         fi
-		yes '' | oe_runmake oldconfig
+
+        echo 'CONFIG_FHANDLE=y' >> ${S}/.config
+
+	yes '' | oe_runmake oldconfig
 }
 
 do_configure_append() {
