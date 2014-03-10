@@ -1,7 +1,7 @@
-From 5ac7e6db61d881f1351970d1180e8ee2d66559b6 Mon Sep 17 00:00:00 2001
+From 2bb8976548bb4a10c3a148db437c2bb88a0f47a8 Mon Sep 17 00:00:00 2001
 From: Alexander Holler <holler@ahsoftware.de>
 Date: Mon, 30 Dec 2013 14:42:40 +0100
-Subject: [PATCH 08/14] fb: udlfb: fix scheduling while atomic.
+Subject: [PATCH 08/15] fb: udlfb: fix scheduling while atomic.
 
 The console functions are using spinlocks while calling fb-driver ops
 but udlfb waits for a semaphore in many ops. This results in the BUG
@@ -118,5 +118,5 @@ index f9466fa..1e765f9 100644
  	atomic_t lost_pixels; /* 1 = a render op failed. Need screen refresh */
  	char *edid; /* null until we read edid from hw or get from sysfs */
 -- 
-1.8.4.2
+1.8.3.4
 

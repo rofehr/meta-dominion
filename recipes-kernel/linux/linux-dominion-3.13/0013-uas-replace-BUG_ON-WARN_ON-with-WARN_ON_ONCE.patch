@@ -1,7 +1,7 @@
-From 38e22a8096d36694dd758eaaa25c34a1ced39725 Mon Sep 17 00:00:00 2001
+From 28f15c2e1030895fe6e24b707057bdcc14155240 Mon Sep 17 00:00:00 2001
 From: Gerd Hoffmann <kraxel@redhat.com>
 Date: Fri, 13 Sep 2013 13:27:14 +0200
-Subject: [PATCH 13/14] uas: replace BUG_ON() + WARN_ON() with WARN_ON_ONCE()
+Subject: [PATCH 13/15] uas: replace BUG_ON() + WARN_ON() with WARN_ON_ONCE()
 
 Signed-off-by: Gerd Hoffmann <kraxel@redhat.com>
 ---
@@ -86,5 +86,5 @@ index f049038..046eedf 100644
  	list_add_tail(&cmdinfo->dead, &devinfo->dead_list);
  	if (cmdinfo->state & IS_IN_WORK_LIST) {
 -- 
-1.8.4.2
+1.8.3.4
 

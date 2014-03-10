@@ -1,7 +1,7 @@
-From 437b7eedd669aba8f01f8a483a4445de6aa1e40f Mon Sep 17 00:00:00 2001
+From 9d93bdfb9cea10f5d1d0e8bd4f8a968d3cbeae55 Mon Sep 17 00:00:00 2001
 From: Gerd Hoffmann <kraxel@redhat.com>
 Date: Fri, 13 Sep 2013 13:27:12 +0200
-Subject: [PATCH 11/14] uas: make work list per-device
+Subject: [PATCH 11/15] uas: make work list per-device
 
 Simplifies locking, we'll protect the list with the device spin lock.
 Also plugs races which can happen when two devices operate on the
@@ -215,5 +215,5 @@ index fc08ee9..3cf5a5f 100644
  	usb_kill_anchored_urbs(&devinfo->cmd_urbs);
  	usb_kill_anchored_urbs(&devinfo->sense_urbs);
 -- 
-1.8.4.2
+1.8.3.4
 

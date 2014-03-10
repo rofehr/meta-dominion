@@ -1,7 +1,7 @@
-From f36e84e4e27d4b76ac060e159a17a2f2fc602413 Mon Sep 17 00:00:00 2001
+From 56b288a4e56034278757230c7f9aa058ac78af57 Mon Sep 17 00:00:00 2001
 From: David Sterba <dsterba@suse.cz>
 Date: Wed, 25 Jan 2012 00:08:06 +0100
-Subject: [PATCH 02/14] btrfs: prepare incompat flags for more compression
+Subject: [PATCH 02/15] btrfs: prepare incompat flags for more compression
  methods
 
 Signed-off-by: David Sterba <dsterba@suse.cz>
@@ -67,7 +67,7 @@ index 8072cfa..4dbe39f 100644
  	if (features & BTRFS_FEATURE_INCOMPAT_SKINNY_METADATA)
  		printk(KERN_ERR "btrfs: has skinny extents\n");
 diff --git a/fs/btrfs/ioctl.c b/fs/btrfs/ioctl.c
-index 21da576..426d4eb 100644
+index 9f831bb..6be2166 100644
 --- a/fs/btrfs/ioctl.c
 +++ b/fs/btrfs/ioctl.c
 @@ -1352,6 +1352,9 @@ int btrfs_defrag_file(struct inode *inode, struct file *file,
@@ -116,5 +116,5 @@ index d71a11d..328971b 100644
  			seq_printf(seq, ",compress-force=%s", compress_type);
  		else
 -- 
-1.8.4.2
+1.8.3.4
 

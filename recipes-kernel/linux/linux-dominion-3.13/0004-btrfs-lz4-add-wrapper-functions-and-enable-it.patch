@@ -1,7 +1,7 @@
-From 8a169f69433c1628a713d0eea4a90f234f468b64 Mon Sep 17 00:00:00 2001
+From 34b6b7e92cf296b03f197159521fea0aab83b295 Mon Sep 17 00:00:00 2001
 From: David Sterba <dsterba@suse.cz>
 Date: Mon, 13 Feb 2012 20:05:37 +0100
-Subject: [PATCH 04/14] btrfs: lz4: add wrapper functions and enable it
+Subject: [PATCH 04/15] btrfs: lz4: add wrapper functions and enable it
 
 Signed-off-by: David Sterba <dsterba@suse.cz>
 ---
@@ -502,5 +502,5 @@ index 328971b..27d9b95 100644
  				ret = -EINVAL;
  				goto out;
 -- 
-1.8.4.2
+1.8.3.4
 

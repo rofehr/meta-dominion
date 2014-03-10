@@ -1,7 +1,7 @@
-From a79433976b214ff6f4c025d6518a9e61689d80ec Mon Sep 17 00:00:00 2001
+From 4d06253ddd6bf38221c88843de86769670e989d5 Mon Sep 17 00:00:00 2001
 From: Gerd Hoffmann <kraxel@redhat.com>
 Date: Fri, 13 Sep 2013 13:27:13 +0200
-Subject: [PATCH 12/14] uas: add dead request list
+Subject: [PATCH 12/15] uas: add dead request list
 
 This patch adds a new list where all requests which are canceled are
 added to, so we don't loose them.  Then, after killing all inflight
@@ -157,5 +157,5 @@ index 3cf5a5f..f049038 100644
  	uas_free_streams(devinfo);
  	kfree(devinfo);
 -- 
-1.8.4.2
+1.8.3.4
 

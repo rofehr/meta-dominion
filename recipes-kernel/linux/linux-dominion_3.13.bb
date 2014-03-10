@@ -9,10 +9,10 @@ FILESPATH =. "${FILE_DIRNAME}/linux-dominion-3.13:${FILE_DIRNAME}/linux-dominion
 
 S = "${WORKDIR}/git"
 
-PV = "3.13.5"
+PV = "3.13.6"
 
 SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;branch=linux-3.13.y"
-SRCREV_pn-${PN} = "dc0ead5dc8682fdd1c1ac10f2bbf567cd8df8e07"
+SRCREV_pn-${PN} = "404df65d0480f6da2b768f6c9b5259436b1de10f"
 
 SRC_URI += " \
              file://0001-usb-stick-slowness-hack.patch \
@@ -29,5 +29,6 @@ SRC_URI += " \
              file://0012-uas-add-dead-request-list.patch \
              file://0013-uas-replace-BUG_ON-WARN_ON-with-WARN_ON_ONCE.patch \
              file://0014-uas-remove-BROKEN.patch \
+             file://0015-x86-quirks-soekris-HPET.patch \
              file://defconfig \
 "

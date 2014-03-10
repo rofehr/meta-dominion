@@ -1,7 +1,7 @@
-From e8099c0a30309463eff5086f4d78d42b422f6158 Mon Sep 17 00:00:00 2001
+From c604154a78fa138c3a53b3810921595c2ed9ad6e Mon Sep 17 00:00:00 2001
 From: Gerd Hoffmann <kraxel@redhat.com>
 Date: Fri, 13 Sep 2013 13:27:10 +0200
-Subject: [PATCH 09/14] xhci: fix usb3 streams
+Subject: [PATCH 09/15] xhci: fix usb3 streams
 
 xhci maintains a radix tree for each stream endpoint because it must
 be able to map a trb address to the stream ring.  Each ring segment
@@ -168,5 +168,5 @@ index 03c74b7..c2f5bee 100644
  		struct xhci_virt_device *virt_dev,
  		unsigned int ep_index);
 -- 
-1.8.4.2
+1.8.3.4
 
