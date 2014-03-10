@@ -3,7 +3,7 @@ require linux.inc
 DESCRIPTION = "Linux kernel"
 KERNEL_IMAGETYPE ?= "zImage"
 
-COMPATIBLE_MACHINE = "(dominion|beast)"
+COMPATIBLE_MACHINE = "(dominion|beast|macbook|soekris-net6501)"
 
 FILESPATH =. "${FILE_DIRNAME}/linux-dominion-3.13:${FILE_DIRNAME}/linux-dominion-3.13/${MACHINE}:"
 
