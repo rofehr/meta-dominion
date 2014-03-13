@@ -30,5 +30,8 @@ SRC_URI += " \
              file://0013-uas-replace-BUG_ON-WARN_ON-with-WARN_ON_ONCE.patch \
              file://0014-uas-remove-BROKEN.patch \
              file://0015-x86-quirks-soekris-HPET.patch \
+             file://0016-block-cgroups-kconfig-build-bits-for-BFQ-v7r2-3.13.patch \
+             file://0017-block-introduce-the-BFQ-v7r2-I-O-sched-for-3.13.patch \
+             file://0018-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r2-for-.patch \
              file://defconfig \
 "
