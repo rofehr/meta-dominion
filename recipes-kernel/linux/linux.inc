@@ -17,11 +17,6 @@ CMDLINE_append = " ${CMDLINE_DEBUG} "
 # Logo resolution (qvga, vga, ...) is machine-specific.
 LOGO_SIZE ?= "."
 
-# Support for binary device tree generation
-
-FILES_kernel-devicetree = "/boot/devicetree*"
-ALLOW_EMPTY_kernel-devicetree = "1"
-
 python __anonymous () {
 
     import bb
@@ -30,8 +25,6 @@ python __anonymous () {
     if devicetree:
     	depends = bb.data.getVar("DEPENDS", d, 1)
     	bb.data.setVar("DEPENDS", "%s dtc-native" % depends, d)
-    	packages = bb.data.getVar("PACKAGES", d, 1)
-    	bb.data.setVar("PACKAGES", "%s kernel-devicetree" % packages, d)
 }
 
 do_configure_prepend() {
@@ -181,37 +174,14 @@ do_install_append() {
 PACKAGES =+ "kernel-headers"
 FILES_kernel-headers = "${exec_prefix}/src/linux*"
 
-PACKAGES =+ "kernel-devicetree-overlays kernel-devicetree"
+require recipes-kernel/linux/linux-dtb.inc
+
+PACKAGES =+ "kernel-devicetree-overlays"
 FILES_kernel-devicetree-overlays = "/lib/firmware/*.dtbo /lib/firmware/*.dts"
 FILES_kernel-devicetree += "/boot/*.dtb"
 
 RDEPENDS_kernel-image_append = " kernel-devicetree"
 RRECOMMENDS_kernel-image_append = " kernel-devicetree-overlays"
-
-do_devicetree_image() {
-    if test -n "${KERNEL_DEVICETREE}" ; then
-        dtc -I dts -O dtb ${KERNEL_DEVICETREE_FLAGS} -o devicetree ${KERNEL_DEVICETREE}
-        install -d ${D}/boot
-        install -m 0644 devicetree ${D}/boot/devicetree-${KERNEL_VERSION}
-        install -d ${DEPLOY_DIR_IMAGE}
-        install -m 0644 devicetree ${DEPLOY_DIR_IMAGE}/${KERNEL_IMAGE_BASE_NAME}.dtb
-        package_stagefile_shell ${DEPLOY_DIR_IMAGE}/${KERNEL_IMAGE_BASE_NAME}.dtb
-        cd ${DEPLOY_DIR_IMAGE}
-        rm -f ${KERNEL_IMAGE_SYMLINK_NAME}.dtb
-        ln -sf ${KERNEL_IMAGE_BASE_NAME}.dtb ${KERNEL_IMAGE_SYMLINK_NAME}.dtb
-        package_stagefile_shell ${DEPLOY_DIR_IMAGE}/${KERNEL_IMAGE_SYMLINK_NAME}.dtb
-    fi
-}
-
-addtask devicetree_image after do_install before do_package do_deploy
-
-pkg_postinst_kernel-devicetree () {
-	cd /${KERNEL_IMAGEDEST}; update-alternatives --install /${KERNEL_IMAGEDEST}/devicetree devicetree devicetree-${KERNEL_VERSION} ${KERNEL_PRIORITY} || true
-}
-
-pkg_postrm_kernel-devicetree () {
-	cd /${KERNEL_IMAGEDEST}; update-alternatives --remove devicetree devicetree-${KERNEL_VERSION} || true
-}
 
 # Automatically depend on lzop/lz4-native if CONFIG_KERNEL_LZO/LZ4 is enabled
 python () {
