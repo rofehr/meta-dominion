@@ -1,7 +1,7 @@
 From 119566bc8ed56e01ebf6933984560814515ec20b Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Sat, 18 Jan 2014 11:36:55 +0100
-Subject: [PATCH 122/122] btrfs: select LZ4(HC) libs
+Subject: [PATCH 122/126] btrfs: select LZ4(HC) libs
 
 LZ4(HC) supports needs these builtin to avoid compile failure and to actually use LZ4 compression.
 

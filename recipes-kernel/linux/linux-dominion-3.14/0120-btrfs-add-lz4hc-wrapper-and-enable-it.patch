@@ -1,7 +1,7 @@
 From 50fa5db5ff28558631e94e46b91507156b97baa4 Mon Sep 17 00:00:00 2001
 From: David Sterba <dsterba@suse.cz>
 Date: Tue, 24 Apr 2012 13:41:45 +0200
-Subject: [PATCH 120/122] btrfs: add lz4hc wrapper and enable it
+Subject: [PATCH 120/126] btrfs: add lz4hc wrapper and enable it
 
 Signed-off-by: David Sterba <dsterba@suse.cz>
 ---

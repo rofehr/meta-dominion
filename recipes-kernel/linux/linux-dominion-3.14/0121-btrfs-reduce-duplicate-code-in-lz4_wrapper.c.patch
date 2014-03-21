@@ -1,7 +1,7 @@
 From f541a9bd98ca33b1e63f989c21534bf148e125d1 Mon Sep 17 00:00:00 2001
 From: Andrew Mahone <andrew.mahone@gmail.com>
 Date: Fri, 1 Jun 2012 21:17:18 -0400
-Subject: [PATCH 121/122] btrfs: reduce duplicate code in lz4_wrapper.c
+Subject: [PATCH 121/126] btrfs: reduce duplicate code in lz4_wrapper.c
 
 Add generic functions for compress_pages and alloc that accept an argument to
 enable high compression, and replace the lz4/lz4hc variants of both with

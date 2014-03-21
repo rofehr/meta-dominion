@@ -139,4 +139,9 @@ SRC_URI += " \
              file://0120-btrfs-add-lz4hc-wrapper-and-enable-it.patch \
              file://0121-btrfs-reduce-duplicate-code-in-lz4_wrapper.c.patch \
              file://0122-btrfs-select-LZ4-HC-libs.patch \
+             file://0123-x86-quirks-soekris-HPET.patch \
+             file://0124-block-cgroups-kconfig-build-bits-for-BFQ-v7r2-3.13.patch \
+             file://0125-block-introduce-the-BFQ-v7r2-I-O-sched-for-3.13.patch \
+             file://0126-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r2-for-.patch \
+             file://0127-block-bfq-Switch-from-BFQ-v7r2-for-3.13.0-to-BFQ-v7r.patch \
             "
