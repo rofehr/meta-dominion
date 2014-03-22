@@ -17,6 +17,8 @@ CMDLINE_append = " ${CMDLINE_DEBUG} "
 # Logo resolution (qvga, vga, ...) is machine-specific.
 LOGO_SIZE ?= "."
 
+ALLOW_EMPTY_kernel-devicetree = "1"
+
 python __anonymous () {
 
     import bb
