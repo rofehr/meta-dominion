@@ -13,7 +13,7 @@ PV = "3.14"
 
 #SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;branch=linux-3.14.y"
 SRC_URI = "git://github.com/torvalds/linux.git"
-SRCREV_pn-${PN} = "fce7fc79c8f7188dfc5eafa1b937bcc3c5a4c2f5"
+SRCREV_pn-${PN} = "f217c44ebd41ce7369d2df07622b2839479183b0"
 
 SRC_URI += " \
              file://defconfig \
