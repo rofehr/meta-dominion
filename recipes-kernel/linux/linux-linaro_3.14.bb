@@ -9,10 +9,10 @@ FILESPATH =. "${FILE_DIRNAME}/linux-linaro:${FILE_DIRNAME}/linux-linaro/${MACHIN
 
 S = "${WORKDIR}/git"
 
-PV = "3.13+3.14-rc7"
+PV = "3.14.0"
 
 SRC_URI = "git://git.linaro.org/kernel/linux-linaro-tracking.git;protocol=http;branch=linux-linaro"
-SRCREV_pn-${PN} = "88236400e1c7d4dd4b59f137cf496aae215af7aa"
+SRCREV_pn-${PN} = "9e325161d87fbaf852d4f343bcaf1406f55dd161"
 
 SRC_URI += " \
              file://defconfig \
