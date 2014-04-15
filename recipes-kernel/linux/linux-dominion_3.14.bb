@@ -5,14 +5,14 @@ KERNEL_IMAGETYPE ?= "zImage"
 
 COMPATIBLE_MACHINE = "(dominion|beast|macbook|soekris-net6501)"
 
-FILESPATH =. "${FILE_DIRNAME}/linux-dominion-${PV}:${FILE_DIRNAME}/linux-dominion-${PV}/${MACHINE}:"
+FILESPATH =. "${FILE_DIRNAME}/linux-dominion-3.14:${FILE_DIRNAME}/linux-dominion-3.14/${MACHINE}:"
 
 S = "${WORKDIR}/git"
 
-PV = "3.14"
+PV = "3.14.1"
 
 SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;branch=linux-3.14.y"
-SRCREV_pn-${PN} = "455c6fdbd219161bd09b1165f11699d6d73de11c"
+SRCREV_pn-${PN} = "387df1bd3fc46bc695b317dda38b3254f4409036"
 
 SRC_URI += " \
              file://defconfig \
