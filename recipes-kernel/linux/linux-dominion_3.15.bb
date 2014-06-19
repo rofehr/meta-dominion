@@ -5,7 +5,7 @@ KERNEL_IMAGETYPE ?= "zImage"
 
 COMPATIBLE_MACHINE = "(dominion|beast|macbook|soekris-net6501)"
 
-FILESPATH =. "${FILE_DIRNAME}/linux-dominion-3.14:${FILE_DIRNAME}/linux-dominion-3.14/${MACHINE}:"
+FILESPATH =. "${FILE_DIRNAME}/linux-dominion-3.15:${FILE_DIRNAME}/linux-dominion-3.15/${MACHINE}:"
 
 S = "${WORKDIR}/git"
 
