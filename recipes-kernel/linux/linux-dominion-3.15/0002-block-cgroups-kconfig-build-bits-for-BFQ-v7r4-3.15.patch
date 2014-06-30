@@ -1,7 +1,7 @@
-From 5986009e0547ed61c1fce1b00e5a751bb8d1ff4c Mon Sep 17 00:00:00 2001
+From f13ed156ea97bf488234afaf3ce3100cf783cddc Mon Sep 17 00:00:00 2001
 From: Paolo Valente <paolo.valente@unimore.it>
 Date: Thu, 22 May 2014 11:59:35 +0200
-Subject: [PATCH 2/4] block: cgroups, kconfig, build bits for BFQ-v7r4-3.15
+Subject: [PATCH 2/5] block: cgroups, kconfig, build bits for BFQ-v7r4-3.15
 
 Update Kconfig.iosched and do the related Makefile changes to include
 kernel configuration options for BFQ. Also add the bfqio controller

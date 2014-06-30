@@ -1,7 +1,7 @@
-From a81780dc9d59e8f0184416ced348a0ec51037c77 Mon Sep 17 00:00:00 2001
+From 0e68aece655f6cdcac82fe986731d7ab062a39fa Mon Sep 17 00:00:00 2001
 From: Paolo Valente <paolo.valente@unimore.it>
 Date: Thu, 9 May 2013 19:10:02 +0200
-Subject: [PATCH 3/4] block: introduce the BFQ-v7r4 I/O sched for 3.15
+Subject: [PATCH 3/5] block: introduce the BFQ-v7r4 I/O sched for 3.15
 
 Add the BFQ-v7r4 I/O scheduler to 3.15.
 The general structure is borrowed from CFQ, as much of the code for
