@@ -3,7 +3,7 @@ require linux.inc
 DESCRIPTION = "Linux kernel"
 KERNEL_IMAGETYPE ?= "zImage"
 
-COMPATIBLE_MACHINE = "(dominion|beast|macbook|soekris-net6501)"
+COMPATIBLE_MACHINE = "(dominion|beast|macbook|soekris-net6501|arietta-g25)"
 
 FILESPATH =. "${FILE_DIRNAME}/linux-dominion-3.15:${FILE_DIRNAME}/linux-dominion-3.15/${MACHINE}:"
 
@@ -21,4 +21,5 @@ SRC_URI += " \
              file://0003-block-introduce-the-BFQ-v7r4-I-O-sched-for-3.15.patch \
              file://0004-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r4-for-.patch \
              file://0005-Btrfs-fix-deadlocks-with-trylock-on-tree-nodes.patch \
+             file://0001-Acme-boards-patches.patch \
             "
