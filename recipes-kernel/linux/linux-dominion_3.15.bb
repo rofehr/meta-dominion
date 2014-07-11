@@ -22,4 +22,5 @@ SRC_URI += " \
              file://0004-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r4-for-.patch \
              file://0005-Btrfs-fix-deadlocks-with-trylock-on-tree-nodes.patch \
              file://0001-Acme-boards-patches.patch \
+             file://0010-video-st7735fb-add-st7735-framebuffer-driver.patch \
             "
