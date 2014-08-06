@@ -26,4 +26,5 @@ SRC_URI += " \
              file://0008-ARM-DTS-arietta-G25-ttyS2-SPI0-ADC-on-expansion-head.patch \
              file://0009-ARM-DTS-acme-arietta-use-button-as-power-button.patch \
              file://0010-ARM-DTS-acme-arietta-drop-chosen-node.patch \
+             file://0001-btusb-add-USB-ID-for-ASUS-X79-DELUXE-onboard-BT.patch \
            "
