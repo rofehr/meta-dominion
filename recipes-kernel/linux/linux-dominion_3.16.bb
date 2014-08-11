@@ -27,4 +27,6 @@ SRC_URI += " \
              file://0009-ARM-DTS-acme-arietta-use-button-as-power-button.patch \
              file://0010-ARM-DTS-acme-arietta-drop-chosen-node.patch \
              file://0001-btusb-add-USB-ID-for-ASUS-X79-DELUXE-onboard-BT.patch \
+             file://0015-Btrfs-fix-csum-tree-corruption-duplicate-and-outdate.patch \
+             file://0016-Btrfs-don-t-monopolize-a-core-when-evicting-inode.patch \
            "
