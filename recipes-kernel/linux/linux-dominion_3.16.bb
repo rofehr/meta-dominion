@@ -9,10 +9,10 @@ FILESPATH =. "${FILE_DIRNAME}/linux-dominion-3.16:${FILE_DIRNAME}/linux-dominion
 
 S = "${WORKDIR}/git"
 
-PV = "3.16.0"
+PV = "3.16.1"
 
 SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;branch=linux-3.16.y"
-SRCREV_pn-${PN} = "19583ca584d6f574384e17fe7613dfaeadcdc4a6"
+SRCREV_pn-${PN} = "9a35988df62b6ce3b69d640da44a3ead96f63182"
 
 SRC_URI += " \
              file://defconfig \
