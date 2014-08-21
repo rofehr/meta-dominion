@@ -32,4 +32,5 @@ SRC_URI += " \
              file://0017-btrfs-disable-strict-file-flushes-for-renames-and-tr.patch \
              file://0018-Btrfs-read-lock-extent-buffer-while-walking-backrefs.patch \
              file://0019-Btrfs-fix-compressed-write-corruption-on-enospc.patch \
+             file://0020-Btrfs-fix-filemap_flush-call-in-btrfs_file_release.patch \
            "
