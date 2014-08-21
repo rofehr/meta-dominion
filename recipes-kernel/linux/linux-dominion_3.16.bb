@@ -29,4 +29,7 @@ SRC_URI += " \
              file://0001-btusb-add-USB-ID-for-ASUS-X79-DELUXE-onboard-BT.patch \
              file://0015-Btrfs-fix-csum-tree-corruption-duplicate-and-outdate.patch \
              file://0016-Btrfs-don-t-monopolize-a-core-when-evicting-inode.patch \
+             file://0017-btrfs-disable-strict-file-flushes-for-renames-and-tr.patch \
+             file://0018-Btrfs-read-lock-extent-buffer-while-walking-backrefs.patch \
+             file://0019-Btrfs-fix-compressed-write-corruption-on-enospc.patch \
            "
