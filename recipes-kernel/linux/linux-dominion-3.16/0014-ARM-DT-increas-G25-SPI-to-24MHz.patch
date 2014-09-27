@@ -1,7 +1,7 @@
-From b2dfcc101a77b977b6a4f44b87540b4599d17e1b Mon Sep 17 00:00:00 2001
+From 021de6f72a9dcc0586a546ac5ac985223a46e3aa Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Tue, 22 Jul 2014 09:21:30 +0200
-Subject: [PATCH 13/13] ARM: DT: increas G25 SPI to 24MHz
+Subject: [PATCH 14/15] ARM: DT: increas G25 SPI to 24MHz
 
 Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
 ---

@@ -1,7 +1,7 @@
-From 330767c57d35a049b5f2b73cba35d96c2a0258c9 Mon Sep 17 00:00:00 2001
+From 7910f5d92f1b45647c8802077eab6ebcd0e493db Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Wed, 9 Jul 2014 10:02:14 +0200
-Subject: [PATCH 09/13] ARM: DTS: acme-arietta: use button as power button
+Subject: [PATCH 10/15] ARM: DTS: acme-arietta: use button as power button
 
 Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
 ---

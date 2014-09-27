@@ -1,7 +1,7 @@
-From 297e7241d83b3c3463e5851b46a6b27f107a4fff Mon Sep 17 00:00:00 2001
+From b9d4aea07ff67064da46d01a6ea0b5d963fbde5a Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Wed, 9 Jul 2014 11:42:50 +0200
-Subject: [PATCH 11/13] ARM: DTS: acme-arietta: add 128x32 OLED on i2c-0
+Subject: [PATCH 12/15] ARM: DTS: acme-arietta: add 128x32 OLED on i2c-0
 
 Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
 ---

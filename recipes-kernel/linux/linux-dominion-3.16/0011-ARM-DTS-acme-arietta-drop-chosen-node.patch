@@ -1,7 +1,7 @@
-From 265c35b9a83fba17af740d9050d9d2ecc1edcaf2 Mon Sep 17 00:00:00 2001
+From b14f55776594483753129bb89251fca546b7cabf Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Wed, 9 Jul 2014 10:05:22 +0200
-Subject: [PATCH 10/13] ARM: DTS: acme-arietta: drop chosen node
+Subject: [PATCH 11/15] ARM: DTS: acme-arietta: drop chosen node
 
 Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
 ---

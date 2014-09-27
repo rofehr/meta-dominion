@@ -1,7 +1,7 @@
-From daa0ca6a8040a7547e7de4c7df893ad9fd02ea91 Mon Sep 17 00:00:00 2001
+From 74edf49059637b94f4e4f9dfae3d9f03eee8deda Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Wed, 6 Aug 2014 14:08:07 +0200
-Subject: [PATCH] btusb: add USB ID for ASUS X79-DELUXE onboard BT
+Subject: [PATCH 01/15] btusb: add USB ID for ASUS X79-DELUXE onboard BT
 
 Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
 ---

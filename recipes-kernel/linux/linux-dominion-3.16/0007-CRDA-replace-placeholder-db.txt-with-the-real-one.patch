@@ -1,7 +1,7 @@
-From e7b587958d3a35f6c756d0796364add10a9c4c30 Mon Sep 17 00:00:00 2001
+From ceb1a99f9133fe386a991ca1accf14992a1123c9 Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Wed, 30 Jul 2014 13:39:01 +0200
-Subject: [PATCH 06/13] CRDA: replace placeholder db.txt with the real one
+Subject: [PATCH 07/15] CRDA: replace placeholder db.txt with the real one
 
 Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
 ---

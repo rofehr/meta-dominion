@@ -1,7 +1,7 @@
-From 6b2b664fee16f42602ee611d0011f802d3a81973 Mon Sep 17 00:00:00 2001
+From ce9a76beb9480d65232539489febeea5e6d40d47 Mon Sep 17 00:00:00 2001
 From: Filipe Manana <fdmanana@suse.com>
 Date: Fri, 8 Aug 2014 02:47:05 +0100
-Subject: [PATCH 16/16] Btrfs: don't monopolize a core when evicting inode
+Subject: [PATCH 15/15] Btrfs: don't monopolize a core when evicting inode
 
 If an inode has a very large number of extent maps, we can spend
 a lot of time freeing them, which triggers a soft lockup warning.
@@ -54,10 +54,10 @@ Tested-by: Satoru Takeuchi <takeuchi_satoru@jp.fujitsu.com>
  1 file changed, 6 insertions(+)
 
 diff --git a/fs/btrfs/inode.c b/fs/btrfs/inode.c
-index 3668048..0d41b3b 100644
+index c6cd34e..9232c70 100644
 --- a/fs/btrfs/inode.c
 +++ b/fs/btrfs/inode.c
-@@ -4662,6 +4662,11 @@ static void evict_inode_truncate_pages(struct inode *inode)
+@@ -4682,6 +4682,11 @@ static void evict_inode_truncate_pages(struct inode *inode)
  		clear_bit(EXTENT_FLAG_LOGGING, &em->flags);
  		remove_extent_mapping(map_tree, em);
  		free_extent_map(em);
@@ -69,7 +69,7 @@ index 3668048..0d41b3b 100644
  	}
  	write_unlock(&map_tree->lock);
  
-@@ -4684,6 +4689,7 @@ static void evict_inode_truncate_pages(struct inode *inode)
+@@ -4704,6 +4709,7 @@ static void evict_inode_truncate_pages(struct inode *inode)
  				 &cached_state, GFP_NOFS);
  		free_extent_state(state);
  
