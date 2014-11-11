@@ -207,6 +207,8 @@ do_install_append() {
 
 	install -d ${D}/lib/firmware
 	install -m 0644 ${S}/firmware/capes/*.dts ${D}/lib/firmware || true
+
+	rm -f ${D}${KERNEL_SRC_PATH}/arch/*/vdso/vdso*.so
 }
 
 PACKAGES =+ "kernel-headers"
