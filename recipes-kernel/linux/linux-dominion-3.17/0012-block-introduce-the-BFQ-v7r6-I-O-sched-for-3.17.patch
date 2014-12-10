@@ -1,4 +1,4 @@
-From 4fd93b10bdbfd9c69769c34a51662ec2a5069883 Mon Sep 17 00:00:00 2001
+From 5dc752976126338926e11d293bc4267d13d09569 Mon Sep 17 00:00:00 2001
 From: Paolo Valente <paolo.valente@unimore.it>
 Date: Thu, 9 May 2013 19:10:02 +0200
 Subject: [PATCH 12/13] block: introduce the BFQ-v7r6 I/O sched for 3.17

@@ -1,4 +1,4 @@
-From cd7c4d247af64ab32878d985301212b760ac31b0 Mon Sep 17 00:00:00 2001
+From b765d207d07784ca76db5788f4094d88ba02f547 Mon Sep 17 00:00:00 2001
 From: Mauro Andreolini <mauro.andreolini@unimore.it>
 Date: Sun, 19 Oct 2014 01:15:59 +0200
 Subject: [PATCH 13/13] block, bfq: add Early Queue Merge (EQM) to BFQ-v7r6 for

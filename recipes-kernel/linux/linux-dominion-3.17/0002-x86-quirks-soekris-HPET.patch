@@ -1,4 +1,4 @@
-From f4186a30d53ad777d72083ec4ca29ff74c382387 Mon Sep 17 00:00:00 2001
+From 49d9adf94ad27f3b7dec9701892fd90f9babac20 Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Tue, 25 Dec 2012 10:39:35 +0100
 Subject: [PATCH 02/13] x86 quirks: soekris HPET

@@ -1,4 +1,4 @@
-From 310a837f71a2ebab25a7ee3693fd72dd1fb205fc Mon Sep 17 00:00:00 2001
+From 48bc7f602baafde6382fff34a28880e2809de90d Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Wed, 9 Jul 2014 09:38:31 +0200
 Subject: [PATCH 05/13] ARM: DTS: arietta G25: ttyS2, SPI0, ADC on expansion

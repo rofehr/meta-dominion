@@ -1,4 +1,4 @@
-From 83d485243cabf0a47e6b6e86f684de5bcf49468d Mon Sep 17 00:00:00 2001
+From 4b61762a7e3492417b37b8ede4c9a77a5e8ee0c1 Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Thu, 10 Jul 2014 12:03:41 +0200
 Subject: [PATCH 09/13] ARM: DTS: acme-arietta: add st7735fb to spi1

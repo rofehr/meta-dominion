@@ -1,4 +1,4 @@
-From 06acfcf0fa4be35eaa44fe53c45a7e3e4afae732 Mon Sep 17 00:00:00 2001
+From 3404db419d2899cf06a803eeb56cb563a671f3ee Mon Sep 17 00:00:00 2001
 From: Paolo Valente <paolo.valente@unimore.it>
 Date: Thu, 22 May 2014 11:59:35 +0200
 Subject: [PATCH 11/13] block: cgroups, kconfig, build bits for BFQ-v7r6-3.17
