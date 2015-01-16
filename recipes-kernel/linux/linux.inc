@@ -181,11 +181,11 @@ do_configure_prepend() {
             done
 
             # Now that all the fragments are located merge them.
-            ( cd ${WORKDIR} && ${S}/scripts/kconfig/merge_config.sh -m -r -O ${S} ${B}/.config ${KERNEL_CONFIG_FRAGMENTS} 1>&2 )
+            ( cd ${WORKDIR} && ${S}/scripts/kconfig/merge_config.sh -m -r -O ${B} ${B}/.config ${KERNEL_CONFIG_FRAGMENTS} 1>&2 )
         fi
 
 	yes '' | oe_runmake -C ${S} O=${B} oldconfig
-        oe_runmake savedefconfig && cp defconfig ${WORKDIR}/defconfig.saved
+        oe_runmake -C ${S} O=${B} savedefconfig && cp ${B}/defconfig ${WORKDIR}/defconfig.saved
 }
 
 do_configure_append() {
@@ -202,8 +202,8 @@ do_install_append() {
 	oe_runmake headers_install INSTALL_HDR_PATH=${D}${exec_prefix}/src/linux-${KERNEL_VERSION} ARCH=$ARCH
 	oe_runmake firmware_install INSTALL_MOD_PATH=${D} ARCH=$ARCH
 	install -d ${D}/boot
-	make dtbs || true
-	install -m 0644 ${S}/arch/arm/boot/dts/*.dtb ${D}/boot || true
+	make -C ${S} O=${B} dtbs || true
+	install -m 0644 ${B}/arch/arm/boot/dts/*.dtb ${D}/boot || true
 
 	install -d ${D}/lib/firmware
 	install -m 0644 ${S}/firmware/capes/*.dts ${D}/lib/firmware || true
