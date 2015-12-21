@@ -21,4 +21,8 @@ SRC_URI += " \
              file://0003-block-cgroups-kconfig-build-bits-for-BFQ-v7r8-4.3.patch \
              file://0004-block-introduce-the-BFQ-v7r8-I-O-sched-for-4.3.patch \
              file://0005-block-bfq-add-Early-Queue-Merge-EQM-to-BFQ-v7r8-for-.patch \
+             file://0006-Acme-boards-patches.patch \
+             file://0007-ARM-DTS-arietta-G25-ttyS2-SPI0-ADC-on-expansion-head.patch \
+             file://0008-ARM-DTS-acme-arietta-use-button-as-power-button.patch \
+             file://0009-ARM-DTS-acme-arietta-drop-chosen-node.patch \
            "
