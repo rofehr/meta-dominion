@@ -21,4 +21,4 @@ do_install() {
 FILES_${PN} += "${datadir} \
                 ${libdir}/cups/filter \
                "
-RDEPENDS_${PN} += "ghostscript"
+RDEPENDS_${PN} += "ghostscript foomatic-db"
