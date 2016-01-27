@@ -1,7 +1,7 @@
-From 7d1f4d225be3db991189b53fce86e8971d37e2b6 Mon Sep 17 00:00:00 2001
+From 078850e274651171063c43500acd4efe0d367895 Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Wed, 9 Jul 2014 09:38:31 +0200
-Subject: [PATCH 7/9] ARM: DTS: arietta G25: ttyS2, SPI0, ADC on expansion
+Subject: [PATCH 4/6] ARM: DTS: arietta G25: ttyS2, SPI0, ADC on expansion
  header
 
 Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>

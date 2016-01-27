@@ -1,7 +1,7 @@
-From c2d3838b3b01de67bece3d000370394b13b14d55 Mon Sep 17 00:00:00 2001
+From 4a9013af443cba3ca4dbf7bb54000a5d04941dbe Mon Sep 17 00:00:00 2001
 From: Sergio Tanzilli <tanzilli@acmesystems.it>
 Date: Wed, 18 Jun 2014 10:03:43 +0200
-Subject: [PATCH 6/9] Acme boards patches
+Subject: [PATCH 3/6] Acme boards patches
 
 Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
 ---

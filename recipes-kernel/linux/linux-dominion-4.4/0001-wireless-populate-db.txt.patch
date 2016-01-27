@@ -1,7 +1,7 @@
-From 6294e33b95906ae54b41028c14d2a6e231a6f5f7 Mon Sep 17 00:00:00 2001
+From 0f32d02725c012d763ce1dfa7471c5e68e696466 Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Tue, 14 Apr 2015 10:16:27 +0200
-Subject: [PATCH 1/5] wireless: populate db.txt
+Subject: [PATCH 1/6] wireless: populate db.txt
 
 Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
 ---
@@ -1270,5 +1270,5 @@ index a2fc3a0..ad2acf5 100644
 +	(5490 - 5710 @ 160), (27), DFS
 +
 -- 
-1.7.10
+2.0.1
 
