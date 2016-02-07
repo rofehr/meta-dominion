@@ -83,9 +83,13 @@ RRECOMMENDS_${PN}_append = " libcec \
                              python-netclient \
                              libcurl \
                              xdpyinfo \
+                             xrandr \
                              ${@base_contains('DISTRO_FEATURES', 'opengl', 'mesa-demos', '', d)} \
 "
 RRECOMMENDS_${PN}_append_libc-glibc = " glibc-charmap-ibm850 \
                                         glibc-gconv-ibm850 \
+					glibc-gconv-unicode \
                                         glibc-gconv-utf-32 \
+					glibc-charmap-utf-8 \
+					glibc-localedata-en-us \
                                       "
