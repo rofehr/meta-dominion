@@ -27,7 +27,7 @@ CACHED_CONFIGUREVARS += " \
     ac_cv_path_PYTHON="${STAGING_BINDIR_NATIVE}/python-native/python" \
 "
 
-PACKAGECONFIG ??= "vaapi ${@base_contains('DISTRO_FEATURES', 'opengl', 'opengl', 'openglesv2', d)}"
+PACKAGECONFIG ??= "vaapi vdpau ${@base_contains('DISTRO_FEATURES', 'opengl', 'opengl', 'openglesv2', d)}"
 PACKAGECONFIG[opengl] = "--enable-gl,--enable-gles,glew"
 PACKAGECONFIG[openglesv2] = "--enable-gles,--enable-gl,"
 PACKAGECONFIG[vaapi] = "--enable-vaapi,--disable-vaapi,libva"
