@@ -3,7 +3,7 @@ SUMMARY = "Kodi Media Center"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE.GPL;md5=930e2a5f63425d8dd72dbd7391c43c46"
 
-DEPENDS = "ffmpeg libsquish libusb1 dcadec libcec libplist expat yajl gperf-native libxmu fribidi mpeg2dec samba fontconfig curl python libass libmodplug libmicrohttpd wavpack libmms cmake-native libsdl-image libsdl-mixer virtual/egl mysql5 sqlite3 libmms faad2 libcdio libpcre boost lzo enca avahi libsamplerate0 libxinerama libxrandr libxtst bzip2 virtual/libsdl jasper zip-native zlib libtinyxml libmad libxslt taglib libssh nasm-native yasm-native"
+DEPENDS = "jsonschemabuilder-native ffmpeg giflib libsquish libusb1 dcadec libcec libplist expat yajl gperf-native libxmu fribidi mpeg2dec samba fontconfig curl python libass libmodplug libmicrohttpd wavpack libmms cmake-native libsdl-image libsdl-mixer virtual/egl mysql5 sqlite3 libmms faad2 libcdio libpcre boost lzo enca avahi libsamplerate0 libxinerama libxrandr libxtst bzip2 virtual/libsdl jasper zip-native zlib libtinyxml libmad libxslt taglib libssh nasm-native yasm-native"
 #require recipes/egl/egl.inc
 
 
@@ -38,6 +38,7 @@ EXTRA_OECONF = " \
     --enable-airplay \
     --disable-optical-drive \
     --with-ffmpeg=shared \
+    --enable-texturepacker=no \
     ${@base_contains('DISTRO_FEATURES', 'opengl', '--enable-gl', '--enable-gles', d)} \
 "
 
@@ -55,7 +56,8 @@ export PYTHON_DIR
 
 do_configure() {
     make -C tools/depends/target/crossguid PREFIX=${STAGING_DIR_HOST}${prefix}
-    sh bootstrap
+    BOOTSTRAP_STANDALONE=1 make -f bootstrap.mk JSON_BUILDER="${STAGING_BINDIR_NATIVE}/JsonSchemaBuilder" 
+    BOOTSTRAP_STANDALONE=1 make -f codegenerator.mk JSON_BUILDER="${STAGING_BINDIR_NATIVE}/JsonSchemaBuilder" 
     oe_runconf
 }
 
