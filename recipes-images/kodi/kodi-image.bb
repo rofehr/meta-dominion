@@ -19,16 +19,11 @@ IMAGE_INSTALL += " \
 	cpufreq-tweaks \
         fixmac \
 	mesa-megadriver \
-	xf86-video-intel \
-	xf86-video-modesetting \
-	xserver-xorg \
+	packagegroup-core-x11-xserver \
 	xserver-xorg-extension-glx \
-	xf86-input-evdev \
-	xinit \
-	kodi \
+	kodi-startup \
 	bash wget curl screen rsync procps pigz \
 	linux-firmware \
-	kernel-modules \
 	dracut \
 "
 
