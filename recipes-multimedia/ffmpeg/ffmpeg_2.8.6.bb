@@ -97,11 +97,11 @@ FILES_${PN}-dev = "${includedir}/${PN}"
 FILES_${PN}-vhook = "${libdir}/vhook"
 FILES_${PN}-vhook-dbg += "${libdir}/vhook/.debug"
 
-FILES_ffmpeg-x264-presets = "${datadir}/*.avpreset"
+FILES_ffmpeg-x264-presets = "${datadir}/*.ffpreset"
 
 LEAD_SONAME = "libavcodec.so"
 
-FILES_${PN}-dev = "${includedir}"
+FILES_${PN}-dev = "${includedir} ${datadir}/examples"
 
 python populate_packages_prepend() {
     av_libdir = d.expand('${libdir}')
