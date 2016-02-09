@@ -14,6 +14,10 @@ S = "${WORKDIR}/git"
 
 inherit autotools pkgconfig
 
+do_install_append() {
+    rm -f ${D}${libdir}/*/*.la
+}
+
 FILES_${PN}-dbg += "${libdir}/vdpau/.debug"
 FILES_${PN}-dev += "${libdir}/vdpau/lib*${SOLIBSDEV}"
 FILES_${PN} += "${libdir}/vdpau/lib*${SOLIBS}"
