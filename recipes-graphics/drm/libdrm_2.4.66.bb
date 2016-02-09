@@ -21,11 +21,14 @@ SRC_URI[sha256sum] = "79cb8e988749794edfb2d777b298d5292eff353bbbb71ed813589e61d2
 inherit autotools pkgconfig
 
 EXTRA_OECONF += "--disable-cairo-tests \
+                 --enable-freedreno \
                  --enable-omap-experimental-api \
                  --enable-install-test-programs \
                  --disable-manpages \
                  --disable-valgrind \
                 "
+
+
 
 ALLOW_EMPTY_${PN}-drivers = "1"
 PACKAGES =+ "${PN}-tests ${PN}-drivers ${PN}-radeon ${PN}-nouveau ${PN}-omap \
