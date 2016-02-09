@@ -3,9 +3,60 @@ SUMMARY = "Kodi Media Center"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE.GPL;md5=930e2a5f63425d8dd72dbd7391c43c46"
 
-DEPENDS = "jsonschemabuilder-native ffmpeg giflib libsquish libusb1 dcadec libcec libplist expat yajl gperf-native libxmu fribidi mpeg2dec samba fontconfig curl python libass libmodplug libmicrohttpd wavpack libmms cmake-native libsdl-image libsdl-mixer virtual/egl mysql5 sqlite3 libmms faad2 libcdio libpcre boost lzo enca avahi libsamplerate0 libxinerama libxrandr libxtst bzip2 virtual/libsdl jasper zip-native zlib libtinyxml libmad libxslt taglib libssh nasm-native yasm-native"
-#require recipes/egl/egl.inc
-
+DEPENDS = " \
+            gperf-native \
+            jsonschemabuilder-native \
+            nasm-native \
+            yasm-native \
+            zip-native \
+            avahi \
+            boost \
+            bzip2 \
+            curl \
+            dcadec \
+            enca \
+            expat \
+            faad2 \
+            ffmpeg \
+            fontconfig \
+            fribidi \
+            giflib \
+            jasper \
+            libass \
+            libcdio \
+            libcec \
+            libmad \
+            libmicrohttpd \
+            libmms \
+            libmms \
+            libmodplug \
+            libpcre \
+            libplist \
+            libsamplerate0 \
+            libsdl-image \
+            libsdl-mixer \
+            libsquish \
+            libssh \
+            libtinyxml \
+            libusb1 \
+            libxinerama \
+            libxmu \
+            libxrandr \
+            libxslt \
+            libxtst \
+            lzo \
+            mpeg2dec \
+            mysql5 \
+            python \
+            samba \
+            sqlite3 \
+            taglib \
+            virtual/egl \
+            virtual/libsdl \
+            wavpack \
+            yajl \
+            zlib \
+          "
 
 SRCREV = "b587e98911fcedc4b800cd923a882c7aeeaa2146"
 
