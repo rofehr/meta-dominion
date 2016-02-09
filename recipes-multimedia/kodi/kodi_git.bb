@@ -145,6 +145,8 @@ RRECOMMENDS_${PN}_append = " libcec \
                              python-json \
                              python-zlib \
                              python-shell \
+                             python-sqlite3 \
+                             python-compression \
                              libcurl \
                              xdpyinfo \
                              xrandr \
