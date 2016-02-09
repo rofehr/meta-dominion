@@ -140,6 +140,11 @@ RRECOMMENDS_${PN}_append = " libcec \
                              python-lang \
                              python-re \
                              python-netclient \
+                             python-html \
+                             python-difflib \
+                             python-json \
+                             python-zlib \
+                             python-shell \
                              libcurl \
                              xdpyinfo \
                              xrandr \
