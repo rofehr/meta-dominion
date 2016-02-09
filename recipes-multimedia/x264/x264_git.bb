@@ -46,7 +46,7 @@ do_configure() {
 EXTRA_OEMAKE = ""
 
 # Use yasm on x86*
-#AS = "${TARGET_PREFIX}gcc"
+AS = "${TARGET_PREFIX}gcc"
 AS_x86 = "yasm"
 AS_x86-64 = "yasm"
 
