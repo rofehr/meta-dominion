@@ -13,4 +13,5 @@ S = "${WORKDIR}/git"
 
 inherit cmake
 
+FILES_${PN}-dev += "${libdir}/p8-platform"
 
