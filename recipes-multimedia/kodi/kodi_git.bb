@@ -78,7 +78,11 @@ CACHED_CONFIGUREVARS += " \
     ac_cv_path_PYTHON="${STAGING_BINDIR_NATIVE}/python-native/python" \
 "
 
-PACKAGECONFIG ??= "vaapi vdpau opengl"
+ACCEL ?= ""
+ACCEL_x86 = "vaapi vdpau"
+ACCEL_x86-64 = "vaapi vdpau"
+
+PACKAGECONFIG ??= "${ACCEL} opengl"
 PACKAGECONFIG[opengl] = "--enable-gl,--enable-gles,glew"
 PACKAGECONFIG[openglesv2] = "--enable-gles,--enable-gl,"
 PACKAGECONFIG[vaapi] = "--enable-vaapi,--disable-vaapi,libva"
