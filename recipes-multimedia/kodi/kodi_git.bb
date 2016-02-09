@@ -90,7 +90,6 @@ EXTRA_OECONF = " \
     --disable-optical-drive \
     --with-ffmpeg=shared \
     --enable-texturepacker=no \
-    ${@base_contains('DISTRO_FEATURES', 'opengl', '--enable-gl', '--enable-gles', d)} \
 "
 
 FULL_OPTIMIZATION_armv7a = "-fexpensive-optimizations -fomit-frame-pointer -O4 -ffast-math"
