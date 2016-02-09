@@ -64,6 +64,7 @@ PV = "16.0+gitr${SRCPV}"
 SRC_URI = "git://github.com/xbmc/xbmc.git;branch=Jarvis \
            file://0001-configure-don-t-try-to-run-stuff-to-find-tinyxml.patch \
            file://0002-arm64-Fix-build-breakages-due-to-architecture-specif.patch \
+           file://0003-configure-add-aarch64-support.patch \
 "
 
 inherit autotools-brokensep gettext python-dir
@@ -107,6 +108,10 @@ export STAGING_INCDIR
 export PYTHON_DIR
 
 do_configure() {
+    ( for i in $(find ${S} -name "configure.*" ) ; do
+	cd $(dirname $i) && gnu-configize --force || true
+    done )
+
     make -C tools/depends/target/crossguid PREFIX=${STAGING_DIR_HOST}${prefix}
     BOOTSTRAP_STANDALONE=1 make -f bootstrap.mk JSON_BUILDER="${STAGING_BINDIR_NATIVE}/JsonSchemaBuilder" 
     BOOTSTRAP_STANDALONE=1 make -f codegenerator.mk JSON_BUILDER="${STAGING_BINDIR_NATIVE}/JsonSchemaBuilder" 
