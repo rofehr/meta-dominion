@@ -78,7 +78,7 @@ CACHED_CONFIGUREVARS += " \
     ac_cv_path_PYTHON="${STAGING_BINDIR_NATIVE}/python-native/python" \
 "
 
-PACKAGECONFIG ??= "vaapi vdpau ${@base_contains('DISTRO_FEATURES', 'opengl', 'opengl', 'openglesv2', d)}"
+PACKAGECONFIG ??= "vaapi vdpau opengl"
 PACKAGECONFIG[opengl] = "--enable-gl,--enable-gles,glew"
 PACKAGECONFIG[openglesv2] = "--enable-gles,--enable-gl,"
 PACKAGECONFIG[vaapi] = "--enable-vaapi,--disable-vaapi,libva"
@@ -94,8 +94,6 @@ EXTRA_OECONF = " \
 
 FULL_OPTIMIZATION_armv7a = "-fexpensive-optimizations -fomit-frame-pointer -O4 -ffast-math"
 BUILD_OPTIMIZATION = "${FULL_OPTIMIZATION}"
-
-EXTRA_OECONF_append_armv7a = "--cpu=cortex-a8"
 
 # for python modules
 export HOST_SYS
@@ -136,7 +134,7 @@ RRECOMMENDS_${PN}_append = " libcec \
                              libcurl \
                              xdpyinfo \
                              xrandr \
-                             ${@base_contains('DISTRO_FEATURES', 'opengl', 'mesa-demos', '', d)} \
+                             ${@base_contains('PACKAGECONFIG', 'opengl', 'mesa-demos', '', d)} \
 "
 RRECOMMENDS_${PN}_append_libc-glibc = " glibc-charmap-ibm850 \
                                         glibc-gconv-ibm850 \
