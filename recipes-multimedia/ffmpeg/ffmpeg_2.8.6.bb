@@ -51,6 +51,7 @@ USE_NONFREE = "${@bb.utils.contains_any('PACKAGECONFIG', [ 'faac', 'openssl' ], 
 
 EXTRA_OECONF = " \
     --enable-shared \
+    --disable-stripping \
     --enable-pthreads \
     --enable-gpl \
     ${@bb.utils.contains('USE_NONFREE', 'yes', '--enable-nonfree', '', d)} \
