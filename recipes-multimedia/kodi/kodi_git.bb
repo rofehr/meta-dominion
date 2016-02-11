@@ -89,6 +89,7 @@ PACKAGECONFIG[openglesv2] = "--enable-gles,--enable-gl,"
 PACKAGECONFIG[vaapi] = "--enable-vaapi,--disable-vaapi,libva"
 PACKAGECONFIG[vdpau] = "--enable-vdpau,--disable-vdpau,libvdpau"
 PACKAGECONFIG[mysql] = "--enable-mysql,--disable-mysql,mysql5"
+PACKAGECONFIG[wayland] = "--enable-wayland,--disable-wayland,wayland"
 
 EXTRA_OECONF = " \
     --enable-libusb \
