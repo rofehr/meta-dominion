@@ -46,7 +46,6 @@ DEPENDS = " \
             libxtst \
             lzo \
             mpeg2dec \
-            mysql5 \
             python \
             samba \
             sqlite3 \
@@ -65,6 +64,7 @@ SRC_URI = "git://github.com/xbmc/xbmc.git;branch=Jarvis \
            file://0001-configure-don-t-try-to-run-stuff-to-find-tinyxml.patch \
            file://0002-arm64-Fix-build-breakages-due-to-architecture-specif.patch \
            file://0003-configure-add-aarch64-support.patch \
+           file://0004-configure-remove-gles-neon-wayland-assumptions.patch \
 "
 
 inherit autotools-brokensep gettext python-dir
@@ -88,6 +88,7 @@ PACKAGECONFIG[opengl] = "--enable-gl,--enable-gles,glew"
 PACKAGECONFIG[openglesv2] = "--enable-gles,--enable-gl,"
 PACKAGECONFIG[vaapi] = "--enable-vaapi,--disable-vaapi,libva"
 PACKAGECONFIG[vdpau] = "--enable-vdpau,--disable-vdpau,libvdpau"
+PACKAGECONFIG[mysql] = "--enable-mysql,--disable-mysql,mysql5"
 
 EXTRA_OECONF = " \
     --enable-libusb \
