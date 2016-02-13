@@ -7,6 +7,7 @@ DEPENDS = " \
             gperf-native \
             jsonschemabuilder-native \
             nasm-native \
+            swig-native \
             yasm-native \
             zip-native \
             avahi \
