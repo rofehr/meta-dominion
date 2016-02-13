@@ -1,5 +1,7 @@
 require linux.inc
 
+DEPENDS += "openssl-native"
+
 DESCRIPTION = "Linux kernel"
 KERNEL_IMAGETYPE ?= "zImage"
 
