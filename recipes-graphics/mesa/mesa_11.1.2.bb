@@ -1,6 +1,6 @@
 require recipes-graphics/mesa/${BPN}.inc
 
-SRCREV = "ee5d530d338b451cdc37fdaf0a54ec958fcf605e"
+SRCREV = "7bcd827806b0816d61122ba3d37dd40178d96d98"
 SRC_URI = "git://anongit.freedesktop.org/git/mesa/mesa.git;protocol=http;branch=11.1"
 
 S = "${WORKDIR}/git"
