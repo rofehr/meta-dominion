@@ -11,10 +11,10 @@ FILESPATH =. "${FILE_DIRNAME}/linux-dominion-4.4:${FILE_DIRNAME}/linux-dominion-
 
 S = "${WORKDIR}/git"
 
-PV = "4.4.1"
+PV = "4.4.2"
 
 SRC_URI = "git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git;branch=linux-4.4.y"
-SRCREV_pn-${PN} = "f1ab5eafa3625b41c74326a1994a820ff805d5b2"
+SRCREV_pn-${PN} = "1cb8570bf04ab12a03c31c397a4d158f24895d9c"
 
 SRC_URI += " \
              file://0001-wireless-populate-db.txt.patch \
