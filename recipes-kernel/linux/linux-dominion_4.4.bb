@@ -5,7 +5,7 @@ DEPENDS += "openssl-native"
 DESCRIPTION = "Linux kernel"
 KERNEL_IMAGETYPE ?= "zImage"
 
-COMPATIBLE_MACHINE = "(dominion-old|dominion|beast|macbook|soekris-net6501|arietta-g25|macbook)"
+COMPATIBLE_MACHINE = "(dominion-old|dominion|beast|macbook|soekris-net6501|arietta-g25|macbook|minnow|minnowboard|fri2)"
 
 FILESPATH =. "${FILE_DIRNAME}/linux-dominion-4.4:${FILE_DIRNAME}/linux-dominion-4.4/${MACHINE}:"
 
