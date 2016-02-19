@@ -1,7 +1,7 @@
 From e9c7f4d2b134e7b8721487c19a50d9e443db95b5 Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Thu, 11 Feb 2016 14:56:49 +0100
-Subject: [PATCH 4/4] configure: remove gles/neon/wayland assumptions
+Subject: [PATCH 4/7] configure: remove gles/neon/wayland assumptions
 
 Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
 ---

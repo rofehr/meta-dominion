@@ -67,6 +67,9 @@ SRC_URI = "git://github.com/xbmc/xbmc.git;branch=Jarvis \
            file://0002-arm64-Fix-build-breakages-due-to-architecture-specif.patch \
            file://0003-configure-add-aarch64-support.patch \
            file://0004-configure-remove-gles-neon-wayland-assumptions.patch \
+           file://0005-handle-SIGTERM.patch \
+           file://0006-add-support-to-read-frequency-output-if-using-intel-.patch \
+           file://0007-https-github.com-OpenELEC-OpenELEC.tv-blob-master-pa.patch \
 "
 
 inherit autotools-brokensep gettext python-dir

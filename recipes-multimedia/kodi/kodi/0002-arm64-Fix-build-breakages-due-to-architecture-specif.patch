@@ -1,7 +1,7 @@
-From c1334951864d56aa015c8b7782989b31c1bf467d Mon Sep 17 00:00:00 2001
+From 0ef6bf309d3acf433e1c113306c8a9933c7fb7da Mon Sep 17 00:00:00 2001
 From: Edmund Grimley Evans <edmund.grimley.evans@gmail.com>
 Date: Wed, 26 Aug 2015 08:00:58 +0200
-Subject: [PATCH 2/2] arm64: Fix build breakages due to architecture specific
+Subject: [PATCH 2/7] arm64: Fix build breakages due to architecture specific
  guards
 
 Origin: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=796532
