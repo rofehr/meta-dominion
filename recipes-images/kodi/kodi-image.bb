@@ -21,7 +21,7 @@ IMAGE_INSTALL += " \
 	mesa-megadriver \
 	packagegroup-core-x11-xserver \
 	xserver-xorg-extension-glx \
-	kodi-startup \
+	kodi-startup kodi-addon-pvr-hts \
 	bash wget curl screen rsync procps pigz \
 	linux-firmware \
 	dracut \
