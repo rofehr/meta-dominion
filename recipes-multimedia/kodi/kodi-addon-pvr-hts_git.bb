@@ -13,7 +13,7 @@ SRCREV_pvrhts = "7f75b70527922aef953123ff97ebaa22d9fb7cb4"
 
 SRCREV_FORMAT = "pvrhts"
 
-PV = "16.0+gitr${SRCPV}"
+PV = "2.2.13+gitr${SRCPV}"
 SRC_URI = "git://github.com/kodi-pvr/pvr.hts.git;branch=Jarvis;destsuffix=pvr.hts;name=pvrhts \
            file://0001-Update-to-p8-platform.patch \
           "
