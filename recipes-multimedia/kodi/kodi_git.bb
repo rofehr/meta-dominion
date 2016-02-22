@@ -61,7 +61,7 @@ DEPENDS = " \
 
 SRCREV = "7d093104f0fadca6bbdde8b691f2846ad55f90aa"
 
-PV = "16.0+gitr${SRCPV}"
+PV = "16.1+gitr${SRCPV}"
 SRC_URI = "git://github.com/xbmc/xbmc.git;branch=Jarvis \
            file://0001-configure-don-t-try-to-run-stuff-to-find-tinyxml.patch \
            file://0002-arm64-Fix-build-breakages-due-to-architecture-specif.patch \
