@@ -11,7 +11,7 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=8730ad58d11c7bbad9a7066d69f7808e"
 
 PV = "2.99.917+git${SRCPV}"
 
-SRCREV = "8b8c9a36828e90e46ad0755c6861df85f5307fb5"
+SRCREV = "562ae1f29fd4946c5204bacc9eaa4ee13e809753"
 SRC_URI = "git://anongit.freedesktop.org/git/xorg/driver/xf86-video-intel.git;protocol=http \
            "
 
