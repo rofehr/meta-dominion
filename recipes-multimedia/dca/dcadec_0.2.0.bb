@@ -3,7 +3,7 @@ SUMMARY = "DTS Coherent Acoustics decoder with support for HD extensions"
 LICENSE = "LGPLv2.1"
 LIC_FILES_CHKSUM = "file://COPYING.LGPLv2.1;md5=4fbd65380cdd255951079008b364516c"
 
-SRCREV = "0e074384c9569e921f8facfe3863912cdb400596"
+SRCREV = "df18a5f6a47d8f70a90ceb130c95a301f7247877"
 SRC_URI = "git://github.com/foo86/dcadec.git;protocol=http"
 
 S = "${WORKDIR}/git"
