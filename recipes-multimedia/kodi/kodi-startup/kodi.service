@@ -5,7 +5,6 @@ Description=Kodi media thing
 User=root
 Type=simple
 SuccessExitStatus=0 1
-Nice=-10
 IOSchedulingClass=realtime
 IOSchedulingPriority=0
 
