@@ -1,0 +1,116 @@
+From 053899832babec71f794565c2f84385b8b58dfae Mon Sep 17 00:00:00 2001
+From: Rainer Hochecker <fernetmenta@online.de>
+Date: Fri, 25 Dec 2015 20:46:06 +0100
+Subject: [PATCH 1/5] VideoPlayer: add setting for double/triple buffers
+
+---
+ addons/resource.language.en_gb/resources/strings.po     | 13 +++++++++++--
+ system/settings/settings.xml                            | 13 +++++++++++++
+ xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.cpp |  7 ++++++-
+ xbmc/settings/Settings.cpp                              |  1 +
+ xbmc/settings/Settings.h                                |  1 +
+ 5 files changed, 32 insertions(+), 3 deletions(-)
+
+diff --git a/addons/resource.language.en_gb/resources/strings.po b/addons/resource.language.en_gb/resources/strings.po
+index aa865f6..1488512 100644
+--- a/addons/resource.language.en_gb/resources/strings.po
++++ b/addons/resource.language.en_gb/resources/strings.po
+@@ -15955,7 +15955,10 @@ msgctxt "#36042"
+ msgid "Use limited colour range (16-235)"
+ msgstr ""
+ 
+-#empty string with id 36043
++#: system/settings/settings.xml
++msgctxt "#36043"
++msgid "Number of buffers used by graphics driver"
++msgstr ""
+ 
+ #. Name of an action to perform on a specific event, like changing the CEC source away from Kodi
+ #: xbmc/peripherals/devices/PeripheralCecAdapter.cpp
+@@ -18163,7 +18166,13 @@ msgctxt "#36551"
+ msgid "Defines the strength of the stereoscopic 3D effect in the GUI. This is done by controlling the depth of perception within the GUI, so the higher the value, the more elements will pop out of the screen. [Zero] Disables the stereoscopic 3D effect of the GUI.[CR]For a good visual experience, the value should be higher for small screens and lower for large screens. Note: this is not supported by all skins."
+ msgstr ""
+ 
+-#empty strings from id 36552 to 36599
++#. Description of setting "System -> Video output -> NoOfBuffers" with label #36043
++#: system/settings/settings.xml
++msgctxt "#36552"
++msgid "Select if graphics driver uses double or triple buffering."
++msgstr ""
++
++#empty strings from id 36553 to 36599
+ 
+ #. Description of setting "System -> Video output -> Dither" with label #36099
+ #: system/settings/settings.xml
+diff --git a/system/settings/settings.xml b/system/settings/settings.xml
+index 3070cc4..cc33137 100644
+--- a/system/settings/settings.xml
++++ b/system/settings/settings.xml
+@@ -2399,6 +2399,19 @@
+         </setting>
+       </group>
+       <group id="3">
++        <setting id="videoscreen.noofbuffers" type="integer" label="36043" help="36552">
++          <level>2</level>
++          <default>3</default> <!-- triple buffers -->
++          <constraints>
++            <minimum>2</minimum>
++            <step>1</step>
++            <maximum>3</maximum>
++          </constraints>
++          <updates>
++            <update type="change" />
++          </updates>
++          <control type="list" format="string" />
++        </setting>
+         <setting id="videoscreen.guicalibration" type="action" label="214" help="36357">
+           <level>1</level>
+           <control type="button" format="action" />
+diff --git a/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.cpp b/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.cpp
+index fbbb23c..0843c9d 100644
+--- a/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.cpp
++++ b/xbmc/cores/VideoPlayer/VideoRenderers/RenderManager.cpp
+@@ -1055,10 +1055,15 @@ void CRenderManager::PresentBlend(bool clear, DWORD flags, DWORD alpha)
+ 
+ void CRenderManager::UpdateDisplayLatency()
+ {
+-  float refresh = g_graphicsContext.GetFPS();
++  float fps = g_graphicsContext.GetFPS();
++  float refresh = fps;
+   if (g_graphicsContext.GetVideoResolution() == RES_WINDOW)
+     refresh = 0; // No idea about refresh rate when windowed, just get the default latency
+   m_displayLatency = (double) g_advancedSettings.GetDisplayLatency(refresh);
++
++  int buffers = CSettings::GetInstance().GetInt(CSettings::SETTING_VIDEOSCREEN_NOOFBUFFERS);
++  m_displayLatency += (buffers - 1) / fps;
++
+ }
+ 
+ void CRenderManager::UpdateResolution()
+diff --git a/xbmc/settings/Settings.cpp b/xbmc/settings/Settings.cpp
+index b46053f..6aa6cba 100644
+--- a/xbmc/settings/Settings.cpp
++++ b/xbmc/settings/Settings.cpp
+@@ -338,6 +338,7 @@ const std::string CSettings::SETTING_VIDEOSCREEN_FAKEFULLSCREEN = "videoscreen.f
+ const std::string CSettings::SETTING_VIDEOSCREEN_BLANKDISPLAYS = "videoscreen.blankdisplays";
+ const std::string CSettings::SETTING_VIDEOSCREEN_STEREOSCOPICMODE = "videoscreen.stereoscopicmode";
+ const std::string CSettings::SETTING_VIDEOSCREEN_PREFEREDSTEREOSCOPICMODE = "videoscreen.preferedstereoscopicmode";
++const std::string CSettings::SETTING_VIDEOSCREEN_NOOFBUFFERS = "videoscreen.noofbuffers";
+ const std::string CSettings::SETTING_VIDEOSCREEN_GUICALIBRATION = "videoscreen.guicalibration";
+ const std::string CSettings::SETTING_VIDEOSCREEN_TESTPATTERN = "videoscreen.testpattern";
+ const std::string CSettings::SETTING_VIDEOSCREEN_LIMITEDRANGE = "videoscreen.limitedrange";
+diff --git a/xbmc/settings/Settings.h b/xbmc/settings/Settings.h
+index a4b8e17..70df630 100644
+--- a/xbmc/settings/Settings.h
++++ b/xbmc/settings/Settings.h
+@@ -296,6 +296,7 @@ public:
+   static const std::string SETTING_VIDEOSCREEN_BLANKDISPLAYS;
+   static const std::string SETTING_VIDEOSCREEN_STEREOSCOPICMODE;
+   static const std::string SETTING_VIDEOSCREEN_PREFEREDSTEREOSCOPICMODE;
++  static const std::string SETTING_VIDEOSCREEN_NOOFBUFFERS;
+   static const std::string SETTING_VIDEOSCREEN_GUICALIBRATION;
+   static const std::string SETTING_VIDEOSCREEN_TESTPATTERN;
+   static const std::string SETTING_VIDEOSCREEN_LIMITEDRANGE;
+-- 
+2.0.1
+

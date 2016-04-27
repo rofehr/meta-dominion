@@ -3,6 +3,8 @@ SUMMARY = "Kodi Media Center"
 LICENSE = "GPLv2"
 LIC_FILES_CHKSUM = "file://LICENSE.GPL;md5=930e2a5f63425d8dd72dbd7391c43c46"
 
+FILESPATH =. "${FILE_DIRNAME}/kodi-17:"
+
 DEPENDS = " \
             curl-native \
             gperf-native \
@@ -60,14 +62,15 @@ DEPENDS = " \
             zlib \
           "
 
-SRCREV = "d4b7b8f1b64ef738c3087c0b869a01983b2eecba"
+SRCREV = "23701793924751eb0c07e46d421eb0b117413e69"
 
 PV = "17+gitr${SRCPV}"
 SRC_URI = "git://github.com/xbmc/xbmc.git;branch=master \
-           file://0001-configure-don-t-try-to-run-stuff-to-find-tinyxml.patch \
+           file://0001-VideoPlayer-add-setting-for-double-triple-buffers.patch \
+           file://0002-configure-don-t-try-to-run-stuff-to-find-tinyxml.patch \
            file://0003-configure-add-aarch64-support.patch \
-           file://0006-add-support-to-read-frequency-output-if-using-intel-.patch \
-           file://0001-Revert-posix-move-libdvd-to-depends.patch \
+           file://0004-add-support-to-read-frequency-output-if-using-intel-.patch \
+           file://0005-Revert-posix-move-libdvd-to-depends.patch \
 "
 
 inherit autotools-brokensep gettext python-dir
