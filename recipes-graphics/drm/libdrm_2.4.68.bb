@@ -15,8 +15,8 @@ DEPENDS = "libpthread-stubs udev libpciaccess"
 SRC_URI = "http://dri.freedesktop.org/libdrm/${BP}.tar.bz2 \
            file://installtests.patch "
 
-SRC_URI[md5sum] = "c6809c48538d6e5999588832045ff014"
-SRC_URI[sha256sum] = "79cb8e988749794edfb2d777b298d5292eff353bbbb71ed813589e61d2bc2d76"
+SRC_URI[md5sum] = "bcc96848d969cecf28223f668eeff354"
+SRC_URI[sha256sum] = "5b4bd9a5922929bc716411cb74061fbf31b06ba36feb89bc1358a91a8d0ca9df"
 
 inherit autotools pkgconfig
 
