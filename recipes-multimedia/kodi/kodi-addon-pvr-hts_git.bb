@@ -40,6 +40,16 @@ do_compile_prepend() {
 	          ${B}/CMakeFiles/*/link.txt
 }
 
+# Make zip package for manual installation
+do_install_append() {
+	install -d ${D}${datadir}/kodi/addons/packages/
+	( cd ${D}${datadir}/kodi/addons
+	  zip -r ${D}${datadir}/kodi/addons/packages/pvr.hts-${PV}.zip pvr.hts -x '*.debug*' )
+}
+
+# Doesn't get added automagically, dlopen()?
+RDEPENDS_${PN} = "libkodiplatform"
+
 INSANE_SKIP_${PN} = "dev-so"
 FILES_${PN} += "${datadir}/kodi"
 FILES_${PN}-dbg += "${datadir}/kodi/addons/*/.debug/"
