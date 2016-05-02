@@ -1,4 +1,4 @@
-From 95ded46eb6729a35c9ca2e895cbf05860570918b Mon Sep 17 00:00:00 2001
+From e7824bf96442780ca96f0d5b7334f88277954b21 Mon Sep 17 00:00:00 2001
 From: Koen Kooi <koen@dominion.thruhere.net>
 Date: Tue, 9 Feb 2016 13:35:36 +0100
 Subject: [PATCH 3/5] configure: add aarch64 support
@@ -10,10 +10,10 @@ Signed-off-by: Koen Kooi <koen@dominion.thruhere.net>
  2 files changed, 14 insertions(+)
 
 diff --git a/configure.ac b/configure.ac
-index d75e7db..c86de04 100644
+index a8aabd1..bd361ad 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -633,6 +633,17 @@ case $host in
+@@ -622,6 +622,17 @@ case $host in
       use_gl=no
       USE_STATIC_FFMPEG=1
       ;;
@@ -32,7 +32,7 @@ index d75e7db..c86de04 100644
       target_platform=target_android
       CORE_SYSTEM_NAME=android
 diff --git a/m4/xbmc_arch.m4 b/m4/xbmc_arch.m4
-index adb8e97..fabd8f8 100644
+index fddae99..c2053f1 100644
 --- a/m4/xbmc_arch.m4
 +++ b/m4/xbmc_arch.m4
 @@ -63,6 +63,9 @@ case $host in

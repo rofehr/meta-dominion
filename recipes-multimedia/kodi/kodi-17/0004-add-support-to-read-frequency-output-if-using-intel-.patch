@@ -1,4 +1,4 @@
-From 7fac9ffc9885acabeb0ea8cef2358814c8ef832d Mon Sep 17 00:00:00 2001
+From 8b56b67b7a65b5027c929f2b6d119ab0bafbca9a Mon Sep 17 00:00:00 2001
 From: Stephan Raue <stephan@openelec.tv>
 Date: Mon, 1 Sep 2014 03:16:37 +0200
 Subject: [PATCH 4/5] add support to read frequency output if using intel's
