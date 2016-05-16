@@ -35,5 +35,6 @@ do_install_append() {
 	mv ${D}/kodiplatform ${D}${libdir}
 }
 
+RPROVIDES_${PN} += "libkodiplatform"
 FILES_${PN}-dev += "${libdir}/*platform"
 
