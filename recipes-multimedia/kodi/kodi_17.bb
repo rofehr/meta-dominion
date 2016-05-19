@@ -63,13 +63,11 @@ DEPENDS = " \
             zlib \
           "
 
-SRCREV = "85d1dc22a31cb36c28f1b860123cbe51a96db13c"
+SRCREV = "96c4c5d5e334d17824a030724bef95f225e5bc59"
 
 PV = "17+gitr${SRCPV}"
 SRC_URI = "git://github.com/xbmc/xbmc.git;branch=master \
-           file://0001-VideoPlayer-add-setting-for-double-triple-buffers.patch \
            file://0002-configure-don-t-try-to-run-stuff-to-find-tinyxml.patch \
-           file://0003-configure-add-aarch64-support.patch \
            file://0004-add-support-to-read-frequency-output-if-using-intel-.patch \
            file://0005-Revert-posix-move-libdvd-to-depends.patch \
 "
