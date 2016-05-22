@@ -63,7 +63,7 @@ DEPENDS = " \
             zlib \
           "
 
-SRCREV = "96c4c5d5e334d17824a030724bef95f225e5bc59"
+SRCREV = "569f576e15ac7097d7b1cfc533acfec905e094c6"
 
 PV = "17+gitr${SRCPV}"
 SRC_URI = "git://github.com/xbmc/xbmc.git;branch=master \
@@ -141,6 +141,14 @@ do_compile_prepend() {
     for i in $(find . -name "*.mak*" -o    -name "Makefile") ; do
         sed -i -e 's:I/usr/include:I${STAGING_INCDIR}:g' -e 's:-rpath \$(libdir):-rpath ${libdir}:g' $i
     done
+}
+
+do_install_append() {
+    # remove if empty to avoid sstate conflicts
+    mv ${D}${libdir}/pkgconfig ${D}${libdir}/kodi.pc
+    install -d ${D}${libdir}/pkgconfig
+    mv ${D}${libdir}/kodi.pc ${D}${libdir}/pkgconfig
+    sed /^C/d ${D}${libdir}/pkgconfig/kodi.pc
 }
 
 INSANE_SKIP_${PN} = "rpaths"
