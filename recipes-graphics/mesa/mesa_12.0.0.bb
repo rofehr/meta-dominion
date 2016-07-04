@@ -2,12 +2,12 @@ require recipes-graphics/mesa/${BPN}.inc
 
 LIC_FILES_CHKSUM = "file://docs/license.html;md5=899fbe7e42d494c7c8c159c7001693d5"
 
-SRCREV = "7d41c8aa25ce5f695233de18c0586b630cbfdc74"
+SRCREV = "5e0b11cb6dbeab7ca6a1ba2edca56701cdfde96c"
 SRC_URI = "git://anongit.freedesktop.org/git/mesa/mesa.git;protocol=http;branch=12.0"
 
 S = "${WORKDIR}/git"
 
-DEPENDS += "python-mako-native"
+DEPENDS += "python-mako-native llvm3.3"
 
 inherit pythonnative
 
