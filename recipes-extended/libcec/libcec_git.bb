@@ -16,7 +16,8 @@ S = "${WORKDIR}/git"
 inherit cmake pkgconfig
 
 # Disable python wrapper, it doesn't have crosscompiles
-EXTRA_OECMAKE = "-DSKIP_PYTHON_WRAPPER=1"
+EXTRA_OECMAKE = "-DCMAKE_INSTALL_LIBDIR=${libdir} -DCMAKE_INSTALL_LIBDIR_NOARCH=${libdir} \
+                 -DSKIP_PYTHON_WRAPPER=1"
 
 # cec-client and xbmc need the .so present to work :(
 FILES_${PN} += "${libdir}/*.so"
